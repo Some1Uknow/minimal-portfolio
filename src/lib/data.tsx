@@ -34,7 +34,7 @@ export const personalInfo = {
 };
 
 export const aboutContent = {
-  summary: `Solana engineer who builds, tests, and deploys on-chain programs using Rust and Anchor. I've built three Solana programs deployed to devnet: an escrow protocol, encrypted messenger, and NFT marketplace.`,
+  summary: `Solana engineer who builds, tests, and deploys on-chain Dapps using Rust, Anchor and TypeScript. I've also like educating new developers and onboarding them to the Solana ecosystem.`,
   achievement: `Received a $5,000 Solana Foundation Grant for LearnSol, a developer education platform with 1000+ users, 40+ GitHub stars, and 25k+ impressions. Featured in the Colosseum Codex Newsletter.`,
   expertise: `I specialize in PDAs, cross-program invocations, account validation, and secure program design.`,
 };

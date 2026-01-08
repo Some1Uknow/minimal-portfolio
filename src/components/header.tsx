@@ -5,7 +5,7 @@ import { personalInfo } from '@/lib/data';
 
 export function Header() {
   return (
-    <header className="min-h-[65vh] flex flex-col justify-center px-4 md:px-6">
+    <header className="min-h-[45vh] flex flex-col justify-center px-4 md:px-6">
       <div className="max-w-3xl">
         <div className="mb-4">
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] font-medium text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800/50 rounded-full">

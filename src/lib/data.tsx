@@ -113,6 +113,7 @@ export const projects = [
       'NFT trading platform with listings, sales, and auctions. NFTs held in PDA vaults with cross-program calls for transfers.',
     tags: ['Rust', 'Anchor', 'TypeScript'],
     image: '/projects/pixelmart.png',
+    highlight: 'Live on Devnet',
     links: {
       live: 'https://pixelmart.raghav.codes',
       github: 'https://github.com/Some1Uknow/NFT-marketplace',

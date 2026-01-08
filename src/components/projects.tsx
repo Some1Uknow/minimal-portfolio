@@ -2,7 +2,16 @@
 
 import Image from 'next/image';
 import { InView } from '@/components/ui/in-view';
-import { projects, minorProjects } from '@/lib/data';
+import { projects, minorProjects, skills as skillGroups } from '@/lib/data';
+
+function getIconForTag(tag: string) {
+  const groups = Object.values(skillGroups) as Array<any>;
+  for (const group of groups) {
+    const found = group.find((s: any) => s.name.toLowerCase() === tag.toLowerCase());
+    if (found) return found.icon;
+  }
+  return null;
+}
 
 function ProjectCard({
   project,
@@ -67,15 +76,19 @@ function ProjectCard({
             </p>
           )}
 
-          <div className="flex flex-wrap gap-1 mb-3 flex-grow">
-            {project.tags.slice(0, 4).map((tag) => (
-              <span
-                key={tag}
-                className="px-1.5 py-0.5 text-[10px] text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 rounded"
-              >
-                {tag}
-              </span>
-            ))}
+          <div className="flex flex-wrap gap-1 mb-3 mt-auto">
+            {project.tags.slice(0, 4).map((tag) => {
+              const Icon = getIconForTag(tag);
+              return (
+                <span
+                  key={tag}
+                  className="inline-flex items-center gap-1 px-2 h-6 min-w-[48px] py-0.5 text-[10px] text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 rounded leading-none"
+                >
+                  {Icon && <span className="text-sm">{Icon}</span>}
+                  <span className="truncate">{tag}</span>
+                </span>
+              );
+            })}
           </div>
 
           <div className="flex flex-wrap gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-800 mt-auto">
@@ -173,15 +186,19 @@ function MinorProjectCard({
           <p className="text-xs text-zinc-600 dark:text-zinc-400 mb-3 line-clamp-2 flex-grow">
             {project.description}
           </p>
-          <div className="flex flex-wrap gap-1 mb-3">
-            {project.tags.slice(0, 4).map((tag) => (
-              <span
-                key={tag}
-                className="px-1.5 py-0.5 text-[10px] text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 rounded"
-              >
-                {tag}
-              </span>
-            ))}
+          <div className="flex flex-wrap gap-1 mb-3 mt-auto">
+            {project.tags.slice(0, 4).map((tag) => {
+              const Icon = getIconForTag(tag);
+              return (
+                <span
+                  key={tag}
+                  className="inline-flex items-center gap-1 px-2 h-6 min-w-[48px] py-0.5 text-[10px] text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 rounded leading-none"
+                >
+                  {Icon && <span className="text-sm">{Icon}</span>}
+                  <span className="truncate">{tag}</span>
+                </span>
+              );
+            })}
           </div>
           <div className="flex flex-wrap gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-800">
             {project.links.live && (

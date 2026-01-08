@@ -8,7 +8,7 @@ export function Footer() {
 
   return (
     <footer className="py-6 px-4 md:px-6 border-t border-zinc-100 dark:border-zinc-800">
-      <div className="max-w-5xl">
+      <div className="max-w-5xl mx-auto">
         <InView
           variants={{
             hidden: { opacity: 0 },

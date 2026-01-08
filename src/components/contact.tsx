@@ -48,10 +48,10 @@ export function Contact() {
           className="mb-8"
         >
           <a
-            href={`mailto:${personalInfo.email}`}
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-zinc-100 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors group"
+            href="mailto:raghu250407@gmail.com"
+            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-zinc-900 dark:bg-zinc-100 dark:text-zinc-900 hover:bg-zinc-700 dark:hover:bg-zinc-300 rounded-lg transition-all group shadow-sm hover:shadow-md"
           >
-            <span>{personalInfo.email}</span>
+            <span>Get in touch</span>
             <svg
               className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
               fill="none"

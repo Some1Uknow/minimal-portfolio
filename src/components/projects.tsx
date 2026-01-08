@@ -4,10 +4,17 @@ import Image from 'next/image';
 import { InView } from '@/components/ui/in-view';
 import { projects, minorProjects, skills as skillGroups } from '@/lib/data';
 
+type Skill = {
+  name: string;
+  icon: React.ReactNode;
+};
+
+type SkillGroup = Skill[];
+
 function getIconForTag(tag: string) {
-  const groups = Object.values(skillGroups) as Array<any>;
+  const groups = Object.values(skillGroups) as SkillGroup[];
   for (const group of groups) {
-    const found = group.find((s: any) => s.name.toLowerCase() === tag.toLowerCase());
+    const found = group.find((s: Skill) => s.name.toLowerCase() === tag.toLowerCase());
     if (found) return found.icon;
   }
   return null;

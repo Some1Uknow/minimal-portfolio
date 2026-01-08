@@ -1,7 +1,7 @@
 'use client';
 
 import { InView } from '@/components/ui/in-view';
-import { personalInfo, socials } from '@/lib/data';
+import { socials } from '@/lib/data';
 
 export function Contact() {
   return (

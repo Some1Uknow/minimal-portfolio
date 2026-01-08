@@ -3,15 +3,16 @@
 import { useTheme } from 'next-themes';
 import { motion } from 'motion/react';
 import { FiSun, FiMoon, FiMonitor } from 'react-icons/fi';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const [mounted] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return true;
+    }
+    return false;
+  });
 
   if (!mounted) {
     return null;

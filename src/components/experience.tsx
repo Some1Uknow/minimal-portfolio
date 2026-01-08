@@ -5,7 +5,7 @@ import { experience } from '@/lib/data';
 
 export function Experience() {
   return (
-    <section id="experience" className="py-14 px-4 md:px-6">
+    <section id="experience" className="py-10 px-4 md:px-6">
       <div className="max-w-3xl">
         <InView
           variants={{

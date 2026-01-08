@@ -25,7 +25,7 @@ function ProjectCard({
       viewOptions={{ margin: '0px 0px -100px 0px' }}
       className="group"
     >
-      <article className="h-full rounded-lg bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 hover:border-zinc-200 dark:hover:border-zinc-700 transition-all duration-300 hover:shadow-lg hover:shadow-zinc-100 dark:hover:shadow-zinc-900/50 overflow-hidden">
+      <article className="h-full flex flex-col rounded-lg bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 hover:border-zinc-200 dark:hover:border-zinc-700 transition-all duration-300 hover:shadow-lg hover:shadow-zinc-100 dark:hover:shadow-zinc-900/50 overflow-hidden">
         {/* Screenshot */}
         {project.image && (
           <div className="relative w-full h-32 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
@@ -45,7 +45,7 @@ function ProjectCard({
           </div>
         )}
         
-        <div className="flex flex-col h-full p-4">
+        <div className="flex flex-col flex-1 p-4">
           <div className="flex items-start justify-between mb-2">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-zinc-700 dark:group-hover:text-zinc-200 transition-colors">
               {project.title}
@@ -57,7 +57,7 @@ function ProjectCard({
             )}
           </div>
 
-          <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-3 flex-grow line-clamp-2">
+          <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed mb-3 line-clamp-2">
             {project.description}
           </p>
 
@@ -67,7 +67,7 @@ function ProjectCard({
             </p>
           )}
 
-          <div className="flex flex-wrap gap-1 mb-3">
+          <div className="flex flex-wrap gap-1 mb-3 flex-grow">
             {project.tags.slice(0, 4).map((tag) => (
               <span
                 key={tag}
@@ -78,7 +78,7 @@ function ProjectCard({
             ))}
           </div>
 
-          <div className="flex flex-wrap gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-800">
+          <div className="flex flex-wrap gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-800 mt-auto">
             {project.links.live && (
               <a
                 href={project.links.live}
@@ -149,9 +149,9 @@ function MinorProjectCard({
         delay: index * 0.08,
       }}
       viewOptions={{ margin: '0px 0px -50px 0px' }}
-      className="group"
+      className="group h-full"
     >
-      <article className="rounded-lg bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 hover:border-zinc-200 dark:hover:border-zinc-700 transition-all duration-300 hover:shadow-md overflow-hidden">
+      <article className="h-full flex flex-col rounded-lg bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 hover:border-zinc-200 dark:hover:border-zinc-700 transition-all duration-300 hover:shadow-md overflow-hidden">
         {/* Banner Image */}
         {project.image && (
           <div className="relative w-full h-32 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
@@ -164,13 +164,13 @@ function MinorProjectCard({
           </div>
         )}
         
-        <div className="p-4">
+        <div className="flex flex-col flex-1 p-4">
           <div className="flex items-start justify-between mb-2">
             <h4 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
               {project.title}
             </h4>
           </div>
-          <p className="text-xs text-zinc-600 dark:text-zinc-400 mb-3 line-clamp-2">
+          <p className="text-xs text-zinc-600 dark:text-zinc-400 mb-3 line-clamp-2 flex-grow">
             {project.description}
           </p>
           <div className="flex flex-wrap gap-1 mb-3">
@@ -219,7 +219,7 @@ function MinorProjectCard({
 
 export function Projects() {
   return (
-    <section id="projects" className="py-14 px-4 md:px-6">
+    <section id="projects" className="py-10 px-4 md:px-6">
       <div className="max-w-5xl">
         <InView
           variants={{

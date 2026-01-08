@@ -14,8 +14,37 @@ function SkillBadge({ skill }: { skill: { name: string; icon: React.ReactNode } 
 
 export function About() {
   return (
-    <section id="about" className="py-14 px-4 md:px-6">
+    <section id="about" className="py-10 px-4 md:px-6">
       <div className="max-w-3xl">
+        {/* GitHub Contribution Graph */}
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 20, filter: 'blur(4px)' },
+            visible: { opacity: 1, y: 0, filter: 'blur(0px)' },
+          }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          viewOptions={{ margin: '0px 0px -100px 0px' }}
+          className="mb-8"
+        >
+          <div className="rounded-lg bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 p-4 overflow-hidden">
+            <h3 className="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wider mb-3">
+              GitHub Activity
+            </h3>
+            <div className="flex justify-center overflow-x-auto">
+              {/* <img
+                src="https://ghchart.rshah.org/18181b/some1uknow"
+                alt="GitHub Contribution Heatmap"
+                className="w-full max-w-2xl dark:hidden"
+              /> */}
+              <img
+                src="https://ghchart.rshah.org/52525b/some1uknow"
+                alt="GitHub Contribution Heatmap"
+                className="w-full max-w-2xl hidden dark:block"
+              />
+            </div>
+          </div>
+        </InView>
+
         <InView
           variants={{
             hidden: { opacity: 0, y: 20 },

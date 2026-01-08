@@ -25,7 +25,7 @@ export const personalInfo = {
   location: 'Delhi, India',
   email: 'raghu250407@gmail.com',
   website: 'raghav.codes',
-  tagline: 'Building the future of decentralized applications on Solana',
+  tagline: 'Building the future of Internet Capital Markets on Solana',
   highlights: [
     'Solana Foundation Grant Recipient',
     'SIH24 Winner',
@@ -36,7 +36,7 @@ export const personalInfo = {
 export const aboutContent = {
   summary: `Solana engineer who builds, tests, and deploys on-chain Dapps using Rust, Anchor and TypeScript. I've also like educating new developers and onboarding them to the Solana ecosystem.`,
   achievement: `Received a $5,000 Solana Foundation Grant for LearnSol, a developer education platform with 1000+ users, 40+ GitHub stars, and 25k+ impressions. Featured in the Colosseum Codex Newsletter.`,
-  expertise: `I specialize in PDAs, cross-program invocations, account validation, and secure program design.`,
+  expertise: `I obsess on production-ready Solana dapps (Rust + Anchor + Next + TS) with emphasis on taste and good performance.`,
 };
 
 export const skills = {

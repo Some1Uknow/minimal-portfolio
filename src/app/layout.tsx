@@ -66,9 +66,9 @@ export const metadata: Metadata = {
     siteName: 'Raghav Sharma',
     images: [
       {
-        url: '/og-image.png',
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
-        height: 746,
+        height: 630,
         alt: 'Raghav Sharma - Solana Program Engineer',
       },
     ],
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     description:
       'Solana engineer building on-chain programs with Rust and Anchor. Solana Foundation Grant Recipient, SIH24 Winner, and Superteam India Member.',
     creator: '@Some1UKnow25',
-    images: ['/og-image.png'],
+    images: [`${siteUrl}/og-image.png`],
   },
   robots: {
     index: true,

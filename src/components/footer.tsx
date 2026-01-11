@@ -7,8 +7,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-6 px-4 md:px-6 border-t border-zinc-100 dark:border-zinc-800">
-      <div className="max-w-5xl mx-auto">
+    <footer className="section-wrapper section-footer">
+      <div className="section-content py-6">
         <InView
           variants={{
             hidden: { opacity: 0 },
@@ -17,10 +17,10 @@ export function Footer() {
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <p className="text-xs text-zinc-500 dark:text-zinc-500">
-              © {currentYear} {personalInfo.name}. All rights reserved.
+            <p className="text-sm text-white text-center">
+              © {currentYear} Raghav Sharma. All rights reserved.
             </p>
-            <p className="text-xs text-zinc-400 dark:text-zinc-600">
+            <p className="text-xs text-white opacity-50">
               Built with Next.js, Tailwind CSS & Motion
             </p>
           </div>

@@ -1,6 +1,6 @@
 import { Header } from '@/components/header';
 import { About } from '@/components/about';
-import { Projects } from '@/components/projects';
+import { Projects, OtherProjects } from '@/components/projects';
 import { Experience } from '@/components/experience';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
@@ -25,11 +25,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <main className="mx-auto max-w-6xl">
+    <div className="min-h-screen pt-2 md:pt-4">
+      <main>
         <Header />
         <About />
         <Projects />
+        <OtherProjects />
         <Experience />
         <Contact />
       </main>

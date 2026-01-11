@@ -1,82 +1,54 @@
 'use client';
 
 import { TextEffect } from '@/components/ui/text-effect';
+import { InView } from '@/components/ui/in-view';
 import { personalInfo } from '@/lib/data';
 
 export function Header() {
   return (
-    <header className="min-h-[45vh] flex flex-col justify-center px-4 md:px-6">
-      <div className="max-w-3xl">
-        <div className="mb-4">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] font-medium text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800/50 rounded-full">
-            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
-            Available for opportunities
-          </span>
-        </div>
-
+    <header className="section-wrapper section-header">
+      <div className="section-content min-h-[50vh] flex flex-col justify-center py-12 md:py-20">
         <TextEffect
           as="h1"
-          per="char"
-          preset="fade-in-blur"
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 mb-3"
-          speedReveal={1.5}
-          speedSegment={1.2}
-        >
-          {personalInfo.name}
-        </TextEffect>
-
-        <TextEffect
-          as="p"
-          per="word"
-          preset="blur-sm"
-          delay={0.4}
-          className="text-lg sm:text-xl md:text-2xl font-medium text-zinc-600 dark:text-zinc-400 mb-4"
-          speedReveal={1.2}
-        >
-          {personalInfo.role}
-        </TextEffect>
-
-        <TextEffect
-          as="p"
-          per="word"
           preset="fade"
-          delay={0.8}
-          className="text-sm sm:text-base text-zinc-500 dark:text-zinc-500 max-w-xl mb-5 leading-relaxed"
-          speedReveal={2}
+          per="char"
+          className="font-heading text-4xl sm:text-6xl md:text-7xl mb-6 text-white"
         >
-          {personalInfo.tagline}
+          Raghav Sharma
+        </TextEffect>
+        <TextEffect
+          as="h2"
+          preset="fade"
+          per="char"
+          className="text-lg sm:text-2xl font-medium mb-6 text-white"
+          delay={0.3}
+        >
+          Solana Program Engineer
         </TextEffect>
 
-        <div className="flex flex-wrap gap-1.5 mb-6">
-          {personalInfo.highlights.map((highlight, index) => (
-            <TextEffect
-              key={highlight}
-              as="span"
-              per="word"
-              preset="slide"
-              delay={1.2 + index * 0.15}
-              className="inline-block px-2 py-1 text-[10px] font-medium text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 rounded-md"
-              speedReveal={2}
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 10 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.8 }}
+          viewOptions={{ margin: '0px 0px -50px 0px' }}
+        >
+          <div className="flex items-center gap-8">
+            <a
+              href="#projects"
+              className="text-sm sm:text-base font-medium hover:underline decoration-1 underline-offset-4 transition-all text-white"
             >
-              {highlight}
-            </TextEffect>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap gap-3">
-          <a
-            href="#projects"
-            className="inline-flex items-center justify-center px-4 py-2 text-xs font-medium text-white bg-zinc-900 dark:bg-zinc-50 dark:text-zinc-900 rounded-full hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors"
-          >
-            View Projects
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center px-4 py-2 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors"
-          >
-            Get in Touch
-          </a>
-        </div>
+              View Projects &rarr;
+            </a>
+            <a
+              href="#contact"
+              className="text-sm sm:text-base font-medium hover:underline decoration-1 underline-offset-4 transition-all text-white"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </InView>
       </div>
     </header>
   );

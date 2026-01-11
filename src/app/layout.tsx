@@ -1,19 +1,19 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Inter, Instrument_Serif } from 'next/font/google';
 import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
-import { ThemeToggle } from '@/components/theme-toggle';
+
 import { StructuredData } from '@/components/structured-data';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
   display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const instrumentSerif = Instrument_Serif({
+  variable: '--font-instrument-serif',
   subsets: ['latin'],
+  weight: '400',
   display: 'swap',
 });
 
@@ -122,12 +122,11 @@ export default function RootLayout({
         <link rel="icon-512x512" href="/icon-512x512.png" sizes="512x512" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100`}
+        className={`${inter.variable} ${instrumentSerif.variable} font-sans antialiased bg-zinc-950 text-zinc-100`}
       >
-        <ThemeProvider>
+        <div className="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-teal-500/30">
           {children}
-          <ThemeToggle />
-        </ThemeProvider>
+        </div>
         <StructuredData />
       </body>
     </html>

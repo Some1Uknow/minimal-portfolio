@@ -1,27 +1,117 @@
 @import "tailwindcss";
 
-/* Enable class-based dark mode for next-themes */
-@custom-variant dark (&:where(.dark, .dark *));
+
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-.dark {
   --background: #0a0a0a;
-  --foreground: #ededed;
+  --foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-instrument-serif);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Heading font utility */
+.font-heading {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+}
+
+/* Section wrapper with rounded corners and responsive margins */
+.section-wrapper {
+  width: calc(100% - 3rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Tablet: moderate margins */
+@media (min-width: 768px) {
+  .section-wrapper {
+    width: calc(100% - 16%);
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 0.75rem;
+    border-radius: 2rem;
+  }
+}
+
+/* Desktop: larger margins */
+@media (min-width: 1024px) {
+  .section-wrapper {
+    width: calc(100% - 30%);
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+/* Large desktop: 25% margins */
+@media (min-width: 1440px) {
+  .section-wrapper {
+    width: calc(100% - 50%);
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
+
+/* Individual section backgrounds */
+.section-header {
+  background-image: url('/bg-1.png');
+}
+
+.section-about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/bg-3.png');
+}
+
+.section-projects {
+  background-image: url('/bg-4.png');
+}
+
+.section-other-projects {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/bg-3.png');
+}
+
+.section-experience {
+  background-image: url('/bg-5.png');
+}
+
+.section-contact {
+  background-image: url('/bg-1.png');
+}
+
+.section-footer {
+  background-image: url('/bg-4.png');
+}
+
+/* Section content - internal padding only (wrapper handles outer margins) */
+.section-content {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-content {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-content {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }

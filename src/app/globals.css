@@ -77,7 +77,7 @@ body {
 }
 
 .section-projects {
-  background-image: url('/bg-4.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/image.png');
 }
 
 .section-other-projects {

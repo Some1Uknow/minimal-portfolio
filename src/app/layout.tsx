@@ -52,9 +52,6 @@ export const metadata: Metadata = {
   publisher: 'Raghav Sharma',
   alternates: {
     canonical: '/',
-    languages: {
-      'en-US': '/en-US',
-    },
   },
   openGraph: {
     type: 'website',

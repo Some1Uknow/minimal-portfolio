@@ -71,14 +71,6 @@ const webSiteSchema = {
   url: siteUrl,
   description:
     'Solana engineer building on-chain programs with Rust and Anchor. Solana Foundation Grant Recipient, SIH24 Winner, and Superteam India Member.',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${siteUrl}/search?q={search_term_string}`,
-    },
-    'query-input': 'required name=search_term_string',
-  },
   publisher: {
     '@type': 'Person',
     name: 'Raghav Sharma',

@@ -71,12 +71,23 @@ export const skills = {
 
 export const projects = [
   {
+    title: 'Shadow DEX',
+    description:
+      'ZK Gated swaps on Solana. Proves eligibility without revealing underlying data. Supports Min Balance, Token Holder, and Shielded Spend proofs.',
+    tags: ['Noir', 'Sunspot', 'Rust', 'Anchor', 'Solana', 'Next.js'],
+    highlight: 'ZK Privacy on Solana',
+    image: '/projects/shadow-dex.png',
+    links: {
+      github: 'https://github.com/Some1Uknow/shadow',
+    },
+  },
+  {
     title: 'LearnSolana',
     description:
       'Developer education platform teaching how to build on Solana. AI-powered tutor with RAG, gamified learning with NFT rewards.',
     tags: ['TypeScript', 'Rust', 'Anchor', 'Next.js', 'PostgreSQL'],
     highlight: '$5,000 Solana Foundation Grant',
-    metrics: '1000+ users • 40+ GitHub stars',
+    metrics: '1200+ users • 40+ GitHub stars',
     image: '/projects/learnsolana.png',
     links: {
       live: 'https://learnsol.site',
@@ -96,7 +107,7 @@ export const projects = [
     },
   },
   {
-    title: 'Freelance Escrow Protocol',
+    title: 'SafeProtocol',
     description:
       'Automated escrow system for freelance payments with clear transaction stages. PDA-based accounts with full state management.',
     tags: ['Rust', 'Anchor', 'SPL Token'],
@@ -135,6 +146,16 @@ export const projects = [
 
 export const minorProjects = [
   {
+    title: 'Solana Txn TUI',
+    description:
+      'A comprehensive Terminal User Interface for exploring Solana transactions, accounts, and wallets.',
+    tags: ['Rust', 'Ratatui', 'Solana'],
+    image: '/projects/solana-txn-tui.png',
+    links: {
+      github: 'https://github.com/Some1Uknow/solana-txn-tui',
+    },
+  },
+  {
     title: 'CSV Clean',
     description: 'Browser-based CSV cleaning and processing tool.',
     tags: ['React', 'PapaParse', 'Tailwind'],
@@ -151,16 +172,6 @@ export const minorProjects = [
     links: {
       live: 'https://fastedit.raghav.codes',
       github: 'https://github.com/Some1Uknow/FastEdit-Fully_Client_side_image_editor',
-    },
-  },
-  {
-    title: '3D Text Generator',
-    description: 'Generate 3D text models for web and print.',
-    tags: ['Three.js', 'React'],
-    image: '/projects/3d-text.png',
-    links: {
-      live: 'https://3dtext.raghav.codes',
-      github: 'https://github.com/Some1Uknow/3d-text-generator',
     },
   },
 ];

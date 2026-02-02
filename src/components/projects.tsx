@@ -1,6 +1,7 @@
 'use client';
 
 import { InView } from '@/components/ui/in-view';
+import Link from 'next/link';
 import { projects, minorProjects } from '@/lib/data';
 
 function ProjectCard({
@@ -29,6 +30,14 @@ function ProjectCard({
             {project.title}
           </h3>
           <div className="flex gap-3 shrink-0 ml-4">
+            {project.links.video && (
+              <Link
+                href={`/projects/${project.slug}`}
+                className="text-xs text-white hover:underline transition-all"
+              >
+                Video ↗
+              </Link>
+            )}
             {project.links.live && (
               <a
                 href={project.links.live}

@@ -72,17 +72,21 @@ export const skills = {
 export const projects = [
   {
     title: 'Shadow DEX',
+    slug: 'shadow',
     description:
       'ZK Gated swaps on Solana. Proves eligibility without revealing underlying data. Supports Min Balance, Token Holder, and Shielded Spend proofs.',
     tags: ['Noir', 'Sunspot', 'Rust', 'Anchor', 'Solana', 'Next.js'],
     highlight: 'ZK Privacy on Solana',
     image: '/projects/shadow-dex.png',
     links: {
+      live: 'https://shadow-dex.fly.dev',
       github: 'https://github.com/Some1Uknow/shadow',
+      video: 'https://youtube.com/embed/2DjVA-KAT3Y',
     },
   },
   {
     title: 'LearnSolana',
+    slug: 'learnsolana',
     description:
       'Developer education platform teaching how to build on Solana. AI-powered tutor with RAG, gamified learning with NFT rewards.',
     tags: ['TypeScript', 'Rust', 'Anchor', 'Next.js', 'PostgreSQL'],
@@ -96,6 +100,7 @@ export const projects = [
   },
   {
     title: 'Pigeon',
+    slug: 'pigeon',
     description:
       'End-to-end encrypted messenger on Solana. X25519 key exchange with ChaCha20-Poly1305 encryption. Zero plaintext stored on-chain.',
     tags: ['Rust', 'Anchor', 'X25519', 'Next.js'],
@@ -104,10 +109,12 @@ export const projects = [
     links: {
       live: 'https://pigeon.raghav.codes',
       github: 'https://github.com/Some1Uknow/pigeon',
+      video: 'https://youtube.com/embed/ZA4iPDBXhUE',
     },
   },
   {
     title: 'SafeProtocol',
+    slug: 'safeprotocol',
     description:
       'Automated escrow system for freelance payments with clear transaction stages. PDA-based accounts with full state management.',
     tags: ['Rust', 'Anchor', 'SPL Token'],
@@ -120,6 +127,7 @@ export const projects = [
   },
   {
     title: 'PixelMart',
+    slug: 'pixelmart',
     description:
       'NFT trading platform with listings, sales, and auctions. NFTs held in PDA vaults with cross-program calls for transfers.',
     tags: ['Rust', 'Anchor', 'TypeScript'],
@@ -132,6 +140,7 @@ export const projects = [
   },
   {
     title: 'EzDeploy',
+    slug: 'ezdeploy',
     description:
       'Cloud deployment platform similar to Vercel. Build servers, API gateway, reverse proxy, and ECS container orchestration.',
     tags: ['TypeScript', 'Node.js', 'AWS ECS', 'Redis', 'PostgreSQL'],
@@ -180,23 +189,23 @@ export const experience = [
   {
     role: 'Founder',
     company: 'LearnSolana',
-    period: 'Oct 2025 - Present',
+    period: 'Oct 2025 - Jan 2026',
     description:
-      'Designed curriculum and built entire platform. Awarded $5,000 by Solana Foundation.',
+      'Designed curriculum (50+ tutorials), games, coding exercises and built entire platform. Awarded $5,000 by Solana Foundation.',
   },
   {
     role: 'Software Engineering Intern',
     company: 'FOSSEE, IIT Bombay',
     period: 'Feb 2025 - May 2025',
     description:
-      'Built backend APIs with Django for structural engineering calculations. Created React interfaces for 3D CAD visualization.',
+      'Architected Django APIs for 2,000+ engineers, built 3D CAD visualization with React, and deployed Dockerized microservices with CI/CD.',
   },
   {
     role: 'Software Engineering Intern',
     company: 'Debales AI',
     period: 'Jul 2024 - Sep 2024',
     description:
-      'Built UI components for AI-generated product data. Integrated product images into chatbot responses.',
+      'Engineered data visualizations for 10,000+ AI insights, optimized image rendering via CDN, and built analytics-driven feedback for AI support agents.',
   },
 ];
 

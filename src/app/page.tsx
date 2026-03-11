@@ -9,9 +9,9 @@ import type { Metadata } from 'next';
 const siteUrl = 'https://raghav.codes';
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Solana Engineer - Raghav Sharma',
   description:
-    'Welcome to my portfolio. I am a Solana Program Engineer building on-chain programs with Rust and Anchor. Explore my projects, experience, and get in touch.',
+    'Solana Program Engineer building on-chain programs with Rust and Anchor. Explore my projects, experience, and get in touch.',
   openGraph: {
     title: 'Raghav Sharma | Solana Program Engineer',
     description:

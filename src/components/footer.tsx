@@ -1,7 +1,6 @@
 'use client';
 
 import { InView } from '@/components/ui/in-view';
-import { personalInfo } from '@/lib/data';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();

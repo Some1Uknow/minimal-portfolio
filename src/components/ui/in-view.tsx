@@ -4,6 +4,7 @@ import { ReactNode, useRef, useMemo } from 'react';
 import {
   motion,
   useInView,
+  useReducedMotion,
   Variant,
   Transition,
   UseInViewOptions,
@@ -62,18 +63,30 @@ function InView({
 }: InViewProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once, ...viewOptions });
+  const reducedMotion = useReducedMotion();
 
   const MotionComponent = useMemo(() => {
     return motionComponents[as as SupportedElement] || motion.div;
   }, [as]);
+
+  const resolvedVariants = useMemo(() => {
+    if (!reducedMotion) {
+      return variants;
+    }
+
+    return {
+      hidden: { opacity: 0 },
+      visible: { opacity: 1 },
+    };
+  }, [reducedMotion, variants]);
 
   return (
     <MotionComponent
       ref={ref}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
-      variants={variants}
-      transition={transition}
+      variants={resolvedVariants}
+      transition={reducedMotion ? { duration: 0.2 } : transition}
       className={className}
     >
       {children}

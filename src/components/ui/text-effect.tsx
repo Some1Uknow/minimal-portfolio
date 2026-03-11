@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import {
   AnimatePresence,
   motion,
+  useReducedMotion,
   Variants,
   Transition,
 } from 'motion/react';
@@ -127,19 +128,24 @@ function TextEffect({
   speedSegment = 1,
 }: TextEffectProps) {
   const selectedVariants = variants || presetVariants[preset];
+  const reducedMotion = useReducedMotion();
 
   const MotionTag = useMemo(() => {
     return motionComponents[as as SupportedElement] || motion.p;
   }, [as]);
 
   const segments = useMemo(() => {
+    if (reducedMotion) {
+      return [children];
+    }
+
     if (per === 'line') return children.split('\n');
     if (per === 'word') return children.split(/(\s+)/);
     return children.split('');
-  }, [children, per]);
+  }, [children, per, reducedMotion]);
 
-  const baseStagger = 0.05 / speedReveal;
-  const baseSegmentDuration = 0.3 / speedSegment;
+  const baseStagger = reducedMotion ? 0 : 0.05 / speedReveal;
+  const baseSegmentDuration = reducedMotion ? 0.01 : 0.3 / speedSegment;
 
   const containerVariants: Variants = useMemo(
     () => ({
@@ -195,7 +201,7 @@ function TextEffect({
               key={`${segment}-${index}`}
               variants={itemVariants}
               className={cn(
-                per === 'line' ? 'block' : 'inline-block',
+                per === 'line' || reducedMotion ? 'inline' : 'inline-block',
                 segmentWrapperClassName
               )}
             >

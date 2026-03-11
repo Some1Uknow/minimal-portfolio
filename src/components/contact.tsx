@@ -45,7 +45,7 @@ export function Contact() {
         >
           <a
             href="mailto:raghu250407@gmail.com"
-            className="text-sm sm:text-base font-medium text-white hover:opacity-80 transition-opacity"
+            className="text-sm sm:text-base font-medium text-white underline decoration-white/35 underline-offset-4 transition-all hover:decoration-white/70 hover:text-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
           >
             raghu250407@gmail.com →
           </a>
@@ -66,7 +66,7 @@ export function Contact() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:opacity-80 transition-opacity"
+                  className="transition-all hover:opacity-80 hover:underline hover:underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
                 >
                   {social.name}
                 </a>

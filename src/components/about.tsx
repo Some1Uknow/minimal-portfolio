@@ -1,7 +1,8 @@
 'use client';
 
+import { SkillStrip } from '@/components/skill-strip';
 import { InView } from '@/components/ui/in-view';
-import { aboutContent, skills, recognition } from '@/lib/data';
+import { aboutContent } from '@/lib/data';
 
 export function About() {
   return (
@@ -30,28 +31,26 @@ export function About() {
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
           viewOptions={{ margin: '0px 0px -50px 0px' }}
         >
-          <p className="text-sm sm:text-base text-white leading-relaxed mb-8 md:mb-12">
-            {aboutContent.expertise}
-          </p>
-        </InView>
-
-        {/* Recognition - simplified to inline */}
-        <InView
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1 },
-          }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-          viewOptions={{ margin: '0px 0px -50px 0px' }}
-          className="mb-12"
-        >
-          <p className="text-sm text-white">
-            {recognition.map((item, index) => (
-              <span key={item.title}>
-                {item.title}
-                {index < recognition.length - 1 && <span className="mx-2">·</span>}
-              </span>
-            ))}
+          <p className="max-w-3xl mb-8 text-sm leading-relaxed text-white sm:text-base md:mb-12">
+            {aboutContent.summary} Solana Foundation Grant recipient. Builder of{' '}
+            <a
+              href="https://learnsol.site"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="italic underline decoration-white/45 underline-offset-4 transition-colors hover:text-white/75 hover:decoration-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+            >
+              LearnSolana
+            </a>
+            . Featured in{' '}
+            <a
+              href="https://blog.colosseum.com/audit-subsidy-program-learnsol-umbra/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="italic underline decoration-white/45 underline-offset-4 transition-colors hover:text-white/75 hover:decoration-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+            >
+              Colosseum Codex Newsletter
+            </a>
+            . Winner of Smart India Hackathon 2024.
           </p>
         </InView>
 
@@ -59,37 +58,12 @@ export function About() {
         <InView
           variants={{
             hidden: { opacity: 0 },
-            visible: { opacity: 1 },
+            visible: { opacity: 1, y: 0 },
           }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
+          transition={{ duration: 0.45, ease: 'easeOut', delay: 0.1 }}
           viewOptions={{ margin: '0px 0px -50px 0px' }}
         >
-          <div className="space-y-4">
-            <div>
-              <span className="text-sm text-white">Blockchain — </span>
-              <span className="text-sm text-white">
-                {skills.blockchain.map(s => s.name).join(', ')}
-              </span>
-            </div>
-            <div>
-              <span className="text-sm text-white">Languages — </span>
-              <span className="text-sm text-white">
-                {skills.languages.map(s => s.name).join(', ')}
-              </span>
-            </div>
-            <div>
-              <span className="text-sm text-white">Frameworks — </span>
-              <span className="text-sm text-white">
-                {skills.frameworks.map(s => s.name).join(', ')}
-              </span>
-            </div>
-            <div>
-              <span className="text-sm text-white">Infrastructure — </span>
-              <span className="text-sm text-white">
-                {skills.infrastructure.map(s => s.name).join(', ')}
-              </span>
-            </div>
-          </div>
+          <SkillStrip />
         </InView>
       </div>
     </section>

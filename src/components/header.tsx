@@ -2,7 +2,6 @@
 
 import { TextEffect } from '@/components/ui/text-effect';
 import { InView } from '@/components/ui/in-view';
-import { personalInfo } from '@/lib/data';
 
 export function Header() {
   return (
@@ -37,13 +36,13 @@ export function Header() {
           <div className="flex items-center gap-8">
             <a
               href="#projects"
-              className="text-sm sm:text-base font-medium hover:underline decoration-1 underline-offset-4 transition-all text-white"
+              className="rounded-full px-2 py-1 text-sm font-medium text-white transition-all hover:underline decoration-1 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-base"
             >
               View Projects &rarr;
             </a>
             <a
               href="#contact"
-              className="text-sm sm:text-base font-medium hover:underline decoration-1 underline-offset-4 transition-all text-white"
+              className="rounded-full px-2 py-1 text-sm font-medium text-white transition-all hover:underline decoration-1 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-base"
             >
               Get in Touch
             </a>

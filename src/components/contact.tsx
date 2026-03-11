@@ -15,7 +15,7 @@ export function Contact() {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           viewOptions={{ margin: '0px 0px -100px 0px' }}
         >
-          <h2 className="font-heading text-2xl sm:text-4xl text-white mb-4 md:mb-6">
+          <h2 className="mb-4 font-heading text-xl text-white sm:text-4xl md:mb-6">
             Contact
           </h2>
         </InView>

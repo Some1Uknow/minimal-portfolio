@@ -64,10 +64,10 @@ function ProjectRow({
     <article className="group border-b border-white/12 py-5 transition-colors duration-300 hover:border-white/28 last:border-b-0 sm:py-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between md:gap-6">
         <div className="min-w-0 max-w-2xl">
-          <h2 className="font-heading text-xl leading-none text-white transition-transform duration-300 ease-out group-hover:translate-x-1 sm:text-2xl">
+          <h2 className="font-heading text-xl leading-tight text-white transition-transform duration-300 ease-out group-hover:translate-x-1 sm:text-2xl">
             {project.title}
           </h2>
-          <p className="mt-2 max-w-xl text-sm leading-6 text-white/72">
+          <p className="mt-2 max-w-xl text-pretty text-sm leading-6 text-white/72">
             {project.description}
           </p>
         </div>
@@ -147,17 +147,17 @@ export default async function ProjectCategoryPage({
             </div>
 
             <div className="mt-8 max-w-3xl">
-              <h1 className="text-balance font-heading text-4xl text-white sm:text-6xl">
+              <h1 className="text-balance font-heading text-2xl text-white sm:text-5xl lg:text-6xl">
                 {projectCategory.title}
               </h1>
-              <p className="mt-4 max-w-2xl text-sm leading-6 text-white/74">
+              <p className="mt-4 max-w-2xl text-pretty text-sm leading-6 text-white/74">
                 {projectCategory.pageIntro}
               </p>
             </div>
 
             <nav
               aria-label="Project categories"
-              className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm"
+              className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm sm:gap-x-5"
             >
               {projectCategories.map((categoryOption) => {
                 const isActive = categoryOption.slug === projectCategory.slug;

@@ -103,7 +103,13 @@ export function TechBadgeRow({
   labelMode?: 'show' | 'sr-only' | 'hide';
 }) {
   return (
-    <div className={variant === 'pill' ? 'flex flex-wrap gap-2' : 'flex flex-wrap gap-4'}>
+    <div
+      className={
+        variant === 'pill'
+          ? 'flex flex-wrap items-center gap-2'
+          : 'flex flex-nowrap items-center gap-3 sm:gap-4'
+      }
+    >
       {logos.map((logo) => (
         <TechBadge
           key={logo}

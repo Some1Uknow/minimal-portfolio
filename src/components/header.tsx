@@ -11,19 +11,23 @@ export function Header() {
           as="h1"
           preset="fade"
           per="char"
-          className="font-heading text-4xl sm:text-6xl md:text-7xl mb-6 text-white"
+          className="mb-6 font-heading text-3xl text-white sm:text-6xl md:text-7xl"
         >
           Raghav Sharma
         </TextEffect>
-        <TextEffect
-          as="h2"
-          preset="fade"
-          per="char"
-          className="text-lg sm:text-2xl font-medium mb-6 text-white"
-          delay={0.3}
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 10 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.45, ease: 'easeOut', delay: 0.3 }}
+          viewOptions={{ margin: '0px 0px -50px 0px' }}
         >
-          Solana Program Engineer
-        </TextEffect>
+          <h2 className="mb-6 text-base font-medium text-white sm:text-2xl">
+            Solana Program Engineer{' '}
+            <span className="text-[0.72em] text-white/72">(DeFi mostly)</span>
+          </h2>
+        </InView>
 
         <InView
           variants={{

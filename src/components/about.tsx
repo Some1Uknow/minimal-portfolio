@@ -17,7 +17,7 @@ export function About() {
           transition={{ duration: 0.5, ease: 'easeOut' }}
           viewOptions={{ margin: '0px 0px -100px 0px' }}
         >
-          <h2 className="font-heading text-2xl sm:text-4xl mb-6 md:mb-8 text-white">
+          <h2 className="mb-6 font-heading text-xl text-white sm:text-4xl md:mb-8">
             About
           </h2>
         </InView>
@@ -31,7 +31,7 @@ export function About() {
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
           viewOptions={{ margin: '0px 0px -50px 0px' }}
         >
-          <p className="max-w-3xl mb-8 text-sm leading-relaxed text-white sm:text-base md:mb-12">
+          <p className="mb-8 max-w-3xl text-pretty text-sm leading-relaxed text-white sm:text-base md:mb-12">
             {aboutContent.summary} Solana Foundation Grant recipient. Builder of{' '}
             <a
               href="https://learnsol.site"

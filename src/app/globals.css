@@ -32,6 +32,7 @@ body {
   position: relative;
   border-radius: 1.5rem;
   overflow: hidden;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -85,7 +86,7 @@ body {
   background-image:
     linear-gradient(rgba(10, 10, 10, 0.52), rgba(10, 10, 10, 0.68)),
     url('/bg-2.png');
-  background-position: center;
+  background-position: center 58%;
 }
 
 .section-contact {
